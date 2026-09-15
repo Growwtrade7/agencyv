@@ -1,291 +1,155 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learning Channel</title>
+    <title>gujarati trader™</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Meta Pixel Code -->
     <script>
-      !function(f,b,e,v,n,t,s)
-      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)}(window, document,'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-
-      fbq('init', '1401553618606859');
-      fbq('track', 'PageView');
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1294190469194556');
+    fbq('track', 'PageView');
     </script>
-    <noscript>
-      <img height="1" width="1" style="display:none"
-           src="https://www.facebook.com/tr?id=1401553618606859&ev=PageView&noscript=1"/>
-    </noscript>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1294190469194556&ev=PageView&noscript=1"
+    /></noscript>
+    
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
-        }
-
-        body {
-            background-color: #000000;
-            color: #ffffff;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
+        .telegram-btn {
+            display: inline-flex;
             align-items: center;
-            padding: 1rem;
-        }
-
-        .card {
-            background-color: #161a22;
-            border-radius: 20px;
-            padding: 28px 22px;
-            max-width: 320px;
-            width: 100%;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 20px rgba(34, 197, 94, 0.15);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            animation: fadeIn 0.4s ease-out;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .logo-wrapper {
-            position: relative;
-            width: 110px;
-            height: 110px;
-            margin: 0 auto 20px auto;
-        }
-
-        .logo {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 2px solid #22c55e;
-            animation: logo-pulse 2s infinite ease-in-out;
-            display: block;
-            box-shadow: 0 0 18px rgba(34, 197, 94, 0.4);
-        }
-
-        @keyframes logo-pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.08); }
-            100% { transform: scale(1); }
-        }
-
-        .candle-container {
-            display: flex;
             justify-content: center;
-            align-items: flex-end;
-            height: 50px;
-            gap: 7px;
-            margin-bottom: 16px;
+            gap: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(0, 198, 255, 0.6);
+            animation: pulseGlow 1.8s infinite alternate ease-in-out;
         }
 
-        .candle {
-            width: 10px;
-            border-radius: 3px 3px 0 0;
-            transform-origin: bottom;
-            animation: move-candle 3.5s infinite ease-in-out;
-        }
-
-        @keyframes move-candle {
-            0%, 100% { transform: translateY(0) scaleY(1); }
-            25%, 75% { transform: translateY(-12px) scaleY(1.25); }
-            50% { transform: translateY(0) scaleY(0.85); }
-        }
-
-        .green { background-color: #22c55e; box-shadow: 0 0 8px rgba(34, 197, 94, 0.5); }
-        .red { background-color: #ef4444; box-shadow: 0 0 8px rgba(239, 68, 68, 0.5); }
-
-        h1 {
-            font-size: 22px;
-            font-weight: 800;
-            margin-bottom: 6px;
-            color: #ffffff;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-        }
-
-        h2 {
-            font-size: 15px;
-            color: #22c55e;
-            font-weight: 700;
-            margin-bottom: 16px;
-            letter-spacing: 0.3px;
-        }
-
-        .offer-line {
-            font-size: 13.5px;
-            color: #d1d5db;
-            font-weight: 600;
-            margin-bottom: 22px;
-            line-height: 1.45;
-            padding: 0 4px;
-        }
-
-        .btn {
-            background-color: #22c55e;
-            color: #ffffff;
-            width: 100%;
-            padding: 14px 20px;
-            font-size: 16px;
-            font-weight: 800;
-            border: none;
-            border-radius: 28px;
-            cursor: pointer;
-            margin-bottom: 22px;
-            transition: transform 0.15s ease, background-color 0.2s ease;
-            letter-spacing: 0.2px;
-            box-shadow: 0 0 15px rgba(34, 197, 94, 0.3);
-        }
-
-        .btn:active {
-            transform: scale(0.97);
-            background-color: #16a34a;
-        }
-
-        .feature-list {
-            font-size: 14px;
-            line-height: 1.6;
-            color: #d1d5db;
-            margin-bottom: 20px;
-            text-align: left;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            padding-left: 10px;
-        }
-
-        .feature-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 600;
-            color: #e2e8f0;
-        }
-
-        .check-icon {
-            color: #22c55e;
-            font-weight: 900;
-            font-size: 16px;
-            flex-shrink: 0;
-        }
-
-        .disclaimer {
-            font-size: 10px;
-            color: #6b7280;
-            text-align: center;
-            line-height: 1.4;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
-            padding-top: 12px;
+        @keyframes pulseGlow {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 15px rgba(0, 198, 255, 0.5);
+            }
+            100% {
+                transform: scale(1.04);
+                box-shadow: 0 0 30px rgba(0, 198, 255, 0.9);
+            }
         }
     </style>
 </head>
 <body>
 
-    <div class="card">
-        <div class="logo-wrapper">
-            <img src="GT_Learning_197.jpg" alt="GUJRATI TRADER" class="logo" id="logo" onerror="this.src='https://placehold.co/120x120/16a34a/ffffff?text=GT';">
-        </div>
-
-        <div class="candle-container">
-            <div class="candle green" style="height: 65%; animation-delay: 0.1s;"></div>
-            <div class="candle red" style="height: 40%; animation-delay: 0.25s;"></div>
-            <div class="candle green" style="height: 80%; animation-delay: 0.4s;"></div>
-            <div class="candle red" style="height: 50%; animation-delay: 0.15s;"></div>
-            <div class="candle green" style="height: 90%; animation-delay: 0.3s;"></div>
-        </div>
-
-        <h1 id="channel-name">GUJRATI TRADER</h1>
-        <h2>BankNifty, Nifty, Stock Options</h2>
-
-        <div class="offer-line">
-            Educational content on Nifty, BankNifty & Options chart analysis, shared on our public Telegram channel.
-        </div>
-
-        <button id="joinBtn" class="btn">🚀 Join Telegram Channel</button>
-
-        <div class="feature-list">
-            <div class="feature-item">
-                <span class="check-icon">✓</span>
-                <span>Daily Nifty & BankNifty Chart Updates</span>
-            </div>
-            <div class="feature-item">
-                <span class="check-icon">✓</span>
-                <span>Technical Analysis with Proper Logic</span>
-            </div>
-            <div class="feature-item">
-                <span class="check-icon">✓</span>
-                <span>Live Market Updates & Learning Support</span>
+    <div class="page-container">
+        
+        <div class="logo-section">
+            <div class="logo-circle">
+                <img src="at 1.09.06 AM.jpeg" alt="Logo">
             </div>
         </div>
 
-        <div class="disclaimer">
-            For educational purposes only. Not investment advice. We are  SEBI-registered advisors. Markets are subject to risk — consult a registered advisor before investing.
+        <div class="title-section">
+            <span class="crown">👑</span>
+            <h1>gujarati trader™</h1>
+            <span class="crown">👑</span>
         </div>
+
+        <p class="subtitle">✓ Trusted learning community</p>
+
+        <div class="members-badge">
+            👥 Active Members: <span id="memberCount" style="color: #00c853 !important; font-weight: bold !important; display: inline-block !important;">98,750</span>
+        </div>
+
+        <div class="tags-container">
+            <div class="tag">24/7 Updates</div>
+            <div class="tag">Free to Join</div>
+        </div>
+
+        <a href="https://telegram.me/+CnIS6WOJxaplNjZl" class="telegram-btn" target="_blank" onclick="fbq('track', 'Contact');">
+            🚀 Join on Telegram <span>+</span>
+        </a>
+
+        <div class="features-list">
+            <div class="feature-item">
+                <span class="check-icon">✓</span> Market Insights & Discussions
+            </div>
+            <div class="feature-item">
+                <span class="check-icon">✓</span> Learn with Experts
+            </div>
+            <div class="feature-item">
+                <span class="check-icon">✓</span> Practical Strategies
+            </div>
+        </div>
+
+        <div class="footer-text">
+            ⚡ Stay Ahead with Smart Learning
+        </div>
+
     </div>
 
+    <!-- Nayi Live Background Counting Script -->
     <script>
-        (function() {
-            var p = 'BpYHeVCjxJVhYzZl';
-            var a = "tg://join?invite=" + p;
-            var b = "https://t.me/+" + p;
-            var c = "https://telegram.me/+" + p;
+        function startCounter() {
+            let obj = document.getElementById("memberCount");
+            if (!obj) return;
 
-            var d = document.getElementById('joinBtn');
-            var e = null, f = null;
-            var g = false;
+            let start = 98750; // Yahan se counting fast shuru hogi
+            let end = 100000;  // Pehle 1 Lakh tak tezi se jayega
+            let duration = 2000; // 2 seconds me fast loading poori hogi
+            let startTime = null;
 
-            function h() {
-                if (typeof fetch === 'function') {
-                    fetch('track.php')
-                        .then(res => res.json())
-                        .then(data => {
-                            if (data.shouldFire && typeof fbq === 'function') {
-                                fbq('track', 'Subscribe');
-                            }
-                        })
-                        .catch(function(){});
-                    fetch('log.php').catch(function(){});
+            function step(timestamp) {
+                if (!startTime) startTime = timestamp;
+                let progress = timestamp - startTime;
+                
+                // Fast calculation
+                let current = Math.min(Math.floor((progress / duration) * (end - start) + start), end);
+                obj.innerText = current.toLocaleString('en-US');
+
+                if (progress < duration) {
+                    window.requestAnimationFrame(step);
+                } else {
+                    // Jab 1 lakh poora ho jaye, tab dhire-dhire badhne wala code shuru ho
+                    startInfiniteCounting();
                 }
-
-                if (e) clearTimeout(e);
-                if (f) clearTimeout(f);
-                g = false;
-
-                window.location.href = a;
-
-                e = setTimeout(function() {
-                    if (g) return;
-                    window.location.href = b;
-                    f = setTimeout(function() {
-                        if (g) return;
-                        window.location.href = c;
-                    }, 1500);
-                }, 1500);
             }
+            window.requestAnimationFrame(step);
+        }
 
-            document.addEventListener('visibilitychange', function() {
-                if (document.hidden) {
-                    g = true;
-                    if (e) clearTimeout(e);
-                    if (f) clearTimeout(f);
-                }
-            });
+        // Yeh function 1 lakh ke baad har 2 second me 1 se 3 member badhayega
+        function startInfiniteCounting() {
+            let obj = document.getElementById("memberCount");
+            setInterval(() => {
+                // Pehle text me se comma (,) hatakar number nikalenge
+                let currentVal = parseInt(obj.innerText.replace(/,/g, ''));
+                
+                // Randomly 1, 2 ya 3 member badhane ke liye
+                let randomIncrease = Math.floor(Math.random() * 3) + 1; 
+                currentVal += randomIncrease;
+                
+                // Naya number wapas comma lagakar screen par show karenge
+                obj.innerText = currentVal.toLocaleString('en-US');
+            }, 2000); // 2000 milliseconds yani har 2 second me badhega
+        }
 
-            d.addEventListener('click', function(i) {
-                i.preventDefault();
-                h();
-            });
-        })();
+        // Check load state
+        if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", startCounter);
+        } else {
+            startCounter();
+        }
     </script>
+
 </body>
 </html>
